@@ -6,7 +6,7 @@ Cookiecutter template for flask restful, including blueprints, application facto
 
 ## Introduction
 
-This cookie cutter is a very simple boilerplate for starting a REST api using Flask, flask-restful, marshmallow, SQLAlchemy and jwt.
+This cookie cutter is a very simple boilerplate for starting a REST api using Flask, flask-restful, flask-limiter, marshmallow, SQLAlchemy and jwt.
 It comes with basic project structure and configuration, including blueprints, application factory and basics unit tests.
 
 Features
@@ -16,6 +16,8 @@ Features
 * Simple cli implementation with basics commands (init, run, etc.)
 * [Flask Migrate](https://flask-migrate.readthedocs.io/en/latest/) included in entry point
 * Authentication using [Flask-JWT-Extended](http://flask-jwt-extended.readthedocs.io/en/latest/) including access token and refresh token management
+* Rate Limiting using [Flask-Limiter](https://flask-limiter.
+readthedocs.io/en/latest/)
 * Simple pagination utils
 * Unit tests using pytest and factoryboy
 * Configuration using environment variables
@@ -26,6 +28,7 @@ Used packages :
 * [Flask](http://flask.pocoo.org/)
 * [Flask-RESTful](https://flask-restful.readthedocs.io/en/latest/)
 * [Flask-Migrate](https://flask-migrate.readthedocs.io/en/latest/)
+* [Flask-Limiter](https://flask-limiter.readthedocs.io/en/latest/)
 * [Flask-SQLAlchemy](http://flask-sqlalchemy.pocoo.org/2.3/)
 * [Flask-Marshmallow](https://flask-marshmallow.readthedocs.io/en/latest/)
 * [Flask-JWT-Extended](http://flask-jwt-extended.readthedocs.io/en/latest/)
