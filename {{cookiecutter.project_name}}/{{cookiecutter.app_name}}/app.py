@@ -9,6 +9,10 @@ from {{cookiecutter.app_name}}.extensions import migrate
 
 {%- if cookiecutter.use_celery == "yes"%}, celery{% endif%}
 
+{%- if cookiecutter.use_request_limiter == "yes" %}
+from {{cookiecutter.app_name}}.extensions import limiter
+{%- endif %}
+
 
 def create_app(testing=False):
     """Application factory, used to create application"""
@@ -34,6 +38,10 @@ def configure_extensions(app):
     db.init_app(app)
     jwt.init_app(app)
     migrate.init_app(app, db)
+    {%- if cookiecutter.use_request_limiter == "yes" %}
+    limiter.init_app(app)
+    {%- endif %}
+
 
 
 def configure_cli(app):

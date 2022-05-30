@@ -11,6 +11,7 @@ passlib
 apispec[yaml]
 apispec-webframeworks
 tox
+flask-limiter
 {%- if cookiecutter.use_celery == "yes" %}
 celery[redis]>=5.0.0
 {%- endif %}

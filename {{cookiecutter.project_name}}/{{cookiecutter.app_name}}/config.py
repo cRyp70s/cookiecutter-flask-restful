@@ -17,3 +17,7 @@ CELERY = {
     "result_backend": os.getenv("CELERY_RESULT_BACKEND_URL"),
 }
 {%- endif %}
+
+{%- if cookiecutter.use_request_limiter == "yes" %}
+RATE_LIMIT = ["10 per second", "50 per minute"]
+{%- endif %}
